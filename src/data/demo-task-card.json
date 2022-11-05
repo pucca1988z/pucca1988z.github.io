@@ -1,0 +1,27 @@
+[
+	{
+		"name": "Shepherd Fan",
+		"dept": "Information Technology Division",
+		"status": "false"
+    },
+    {
+        "name": "Bruce Ting",
+        "dept": "Information Technology Division",
+        "status": "false"
+    },
+    {
+        "name": "Bernie Chen",
+        "dept": "Information Technology Division",
+        "status": "false"
+    },
+    {
+        "name": "Graham Lin",
+        "dept": "Information Technology Division",
+        "status": "false"
+    },
+    {
+        "name": "Missi Chen",
+        "dept": "Information Technology Division",
+        "status": "false"
+    }
+]
