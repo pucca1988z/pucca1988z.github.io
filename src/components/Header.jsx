@@ -77,17 +77,17 @@ export default function Header() {
                   <div className="hidden md:block">
                     <div className="ml-4 flex items-center md:ml-6">
                   <div
-                    class="group flex justify-center cursor-pointer"
+                    className="group flex justify-center cursor-pointer"
                   >
                     <BellIcon className='text-white transition group-hover:text-white/75 h-8 w-8'></BellIcon>
-                    <span class="relative flex h-2 w-2">
+                    <span className="relative flex h-2 w-2">
                       {/* notification animation */}
                       <span
-                        class="absolute inline-flex h-full w-full -left-4 animate-ping rounded-full bg-teal-400 opacity-75"
+                        className="absolute inline-flex h-full w-full -left-4 animate-ping rounded-full bg-teal-400 opacity-75"
                       >
                       </span>
                       <span
-                        class="relative inline-flex h-2 w-2 -left-4 rounded-full bg-teal-500"
+                        className="relative inline-flex h-2 w-2 -left-4 rounded-full bg-teal-500"
                       >
                       </span>
                     </span>
