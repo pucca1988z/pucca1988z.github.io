@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+
+
+@keyframes heartAnimate{ 
+  0%,100%{transform:scale(1)rotate(0);}                       /*0%,100%时保持图形的原大小且不旋转*/
+  10%,30%{transform:scale(1) rotate(2deg);}                  /*10%,30%时图形缩小成0.9倍，并且顺时针旋转3度*/
+  20%,40%,60%,80%{transform:scale(1) rotate(-2deg);}         /*20%,40%,60%,80%时图形扩大成1.1倍，并且逆时针旋转3度*/
+  50%,70%{ transform:scale(1) rotate(2deg);}                 /*50%,70%时图形扩大成1.1倍，并且顺时针旋转3度*/
+}
+@-webkit-keyframes heartAnimate{
+  0%,100%{-webkit-transform:scale(1)rotate(0);}
+  10%,30%{-webkit-transform:scale(1) rotate(2deg);}
+  20%,40%,60%,80%{-webkit-transform:scale(1) rotate(-2deg);}
+  50%,70%{-webkit-transform:scale(1) rotate(2deg);}
+}
+@-moz-keyframes heartAnimate{
+  0%,100%{-moz-transform:scale(1)rotate(0);}
+  10%,30%{-moz-transform:scale(1) rotate(2deg);}
+  20%,40%,60%,80%{-moz-transform:scale(1) rotate(-2deg);}
+  50%,70%{ -moz-transform:scale(1) rotate(2deg);}
+}
+@-o-keyframes heartAnimate{
+  0%,100%{-o-transform:scale(1)rotate(0);}
+  10%,30%{-o-transform:scale(1) rotate(2deg);}
+  20%,40%,60%,80%{-o-transform:scale(1) rotate(-2deg);}
+  50%,70%{ -o-transform:scale(1) rotate(2deg);}
+}
+@-ms-keyframes heartAnimate{
+  0%,100%{-ms-transform:scale(1)rotate(0);}
+  10%,30%{-ms-transform:scale(1) rotate(2deg);}
+  20%,40%,60%,80%{-ms-transform:scale(1) rotate(-2deg);}
+  50%,70%{ -ms-transform:scale(1) rotate(2deg);}
+}
+.wave{
+  -webkit-animation: heartAnimate 3s ease infinite;    /*调用名称为heartAnimate的动画，全程3s，速度曲线是ease，无限循环播放*/
+  -moz-animation: heartAnimate 3s ease infinite;
+  -o-animation: heartAnimate 3s ease infinite;
+  -ms-animation: heartAnimate 3s ease infinite;
+  animation: heartAnimate 3s ease infinite;
+}
