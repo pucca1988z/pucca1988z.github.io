@@ -5,8 +5,8 @@ export default function useCenteredTree(defaultTranslate = { x: 0, y: 0 }){
   const [dimensions, setDimensions] = useState();
   const containerRef = useCallback((containerElem) => {
     if (containerElem !== null) {
-      setDimensions({ width:containerElem.offsetWidth, height:containerElem.offsetHeight/3 });
-      setTranslate({ x: containerElem.offsetWidth/2, y: containerElem.offsetHeight/3/2 });
+      setDimensions({ width:containerElem.offsetWidth, height:containerElem.offsetHeight });
+      setTranslate({ x: containerElem.offsetWidth/2, y: containerElem.offsetHeight/2 });
     }
   }, []);
   return [dimensions, translate, containerRef];

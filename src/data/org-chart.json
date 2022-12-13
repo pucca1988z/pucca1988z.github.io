@@ -1,5 +1,8 @@
 {
   "name": "CEO",
+  "attributes":{
+    "Department":"Moxa Inc."
+  },
   "children": [
     {
       "name": "Manager",

@@ -77,7 +77,7 @@ export default function Footer() {
 
           <form className="mt-6">
             <div className="relative mx-auto max-w-lg lg:mx-0">
-              <label className="sr-only" for="email"> Email </label>
+              <label className="sr-only" htmlFor="email"> Email </label>
 
               <input
                 className="w-full rounded-md border-none bg-gray-800 py-4 pl-3 pr-16 text-sm text-white"
@@ -101,7 +101,7 @@ export default function Footer() {
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     d="M12 6v6m0 0v6m0-6h6m-6 0H6"
                   />
                 </svg>
