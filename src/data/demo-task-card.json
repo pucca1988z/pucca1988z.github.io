@@ -1,27 +1,27 @@
 [
 	{
-		"name": "Shepherd Fan",
-		"dept": "Information Technology Division",
+		"name": "鄭勝仁(SJer Cheng)",
+		"dept": "HR Corporate Division",
 		"status": "false"
     },
     {
-        "name": "Bruce Ting",
-        "dept": "Information Technology Division",
+        "name": "黃子庭(Janet TT Huang)",
+        "dept": "HR Corporate Division",
         "status": "false"
     },
     {
-        "name": "Bernie Chen",
-        "dept": "Information Technology Division",
+        "name": "張琬君(Wing Chang)",
+        "dept": "HR Corporate Division",
         "status": "false"
     },
     {
-        "name": "Graham Lin",
-        "dept": "Information Technology Division",
+        "name": "張文蕙(Tina Chang)",
+        "dept": "HR Corporate Division",
         "status": "false"
     },
     {
-        "name": "Missi Chen",
-        "dept": "Information Technology Division",
+        "name": "謝紹中(Joe SC Hsieh)",
+        "dept": "HR Corporate Division",
         "status": "false"
     }
 ]
