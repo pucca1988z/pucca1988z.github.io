@@ -1,8 +1,12 @@
-import React from 'react'
+import React, {useRef} from 'react'
 
 export default function TaskCard(props) {
+
+  const childRef = useRef(null);
+
   let onTaskCardClick = (e) => {
-    console.log(`hello there`);
+    let userName = props.name.substring(props.name.indexOf("(")+1,props.name.indexOf(")"));
+    const childWindow = window.open(`/?userName=${userName}`)
   }
   return (
     <>

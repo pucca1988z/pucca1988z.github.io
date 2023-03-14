@@ -2,7 +2,7 @@ import React from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Fragment } from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 const user = {
@@ -38,6 +38,14 @@ export default function Header() {
     { name: 'My Tasks', href: 'my-task', current: false },
     { name: 'Show My Token', href: 'my-token', current: false },
   ]);
+
+  const [userName, setUserName] = useState('');
+  useEffect(()=>{
+    let queryString = document.location.search
+    let urlParams = new URLSearchParams(queryString)
+    let userName = urlParams.get("userName")
+    if(userName) setUserName(userName);
+  });
 
   return (
     <>
@@ -76,8 +84,9 @@ export default function Header() {
                   </div>
                   <div className="hidden md:block">
                     <div className="ml-4 flex items-center md:ml-6">
+                  { userName ? 
                   <div
-                    className="group flex justify-center cursor-pointer"
+                  className="group flex justify-center cursor-pointer"
                   >
                     <BellIcon className='text-white transition group-hover:text-white/75 h-8 w-8'></BellIcon>
                     <span className="relative flex h-2 w-2">
@@ -88,10 +97,11 @@ export default function Header() {
                       </span>
                       <span
                         className="relative inline-flex h-2 w-2 -left-4 rounded-full bg-teal-500"
-                      >
+                        >
                       </span>
                     </span>
                   </div>
+                  : <BellIcon className='text-white transition group-hover:text-white/75 h-8 w-8'></BellIcon>}
 
                       {/* Profile dropdown */}
                       <Menu as="div" className="relative ml-3">
