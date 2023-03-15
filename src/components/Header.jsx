@@ -2,8 +2,11 @@ import React from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Fragment } from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const user = {
   name: 'ShepherdCW Fan',
@@ -33,11 +36,24 @@ export default function Header() {
       ));
   }
 
+  const notify = () => {
+    toast("Bruce is going to be your new friend!");
+    setUserName("");
+  };
+
   const [navigation, setNavigation] = useState([
     { name: 'Orgnization Chart', href: '/', current: false },
     { name: 'My Tasks', href: 'my-task', current: false },
     { name: 'Show My Token', href: 'my-token', current: false },
   ]);
+
+  const [userName, setUserName] = useState('');
+  useEffect(()=>{
+    let queryString = document.location.search
+    let urlParams = new URLSearchParams(queryString)
+    let userName = urlParams.get("userName")
+    if(userName) setUserName(userName);
+  });
 
   return (
     <>
@@ -76,8 +92,9 @@ export default function Header() {
                   </div>
                   <div className="hidden md:block">
                     <div className="ml-4 flex items-center md:ml-6">
+                  { userName && userName.length > 0 ? 
                   <div
-                    className="group flex justify-center cursor-pointer"
+                  className="group flex justify-center cursor-pointer" onClick={notify}
                   >
                     <BellIcon className='text-white transition group-hover:text-white/75 h-8 w-8'></BellIcon>
                     <span className="relative flex h-2 w-2">
@@ -88,10 +105,11 @@ export default function Header() {
                       </span>
                       <span
                         className="relative inline-flex h-2 w-2 -left-4 rounded-full bg-teal-500"
-                      >
+                        >
                       </span>
                     </span>
                   </div>
+                  : <BellIcon className='text-white transition group-hover:text-white/75 h-8 w-8'></BellIcon>}
 
                       {/* Profile dropdown */}
                       <Menu as="div" className="relative ml-3">
@@ -195,7 +213,20 @@ export default function Header() {
               </Disclosure.Panel>
             </>
           )}
+          
         </Disclosure>
+        <ToastContainer
+            position="top-right"
+            autoClose={3000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"
+        />
     </>
   )
 }

@@ -2,26 +2,26 @@
 	{
 		"name": "鄭勝仁(SJer Cheng)",
 		"dept": "HR Corporate Division",
-		"status": "false"
+		"status": false
     },
     {
         "name": "黃子庭(Janet TT Huang)",
         "dept": "HR Corporate Division",
-        "status": "false"
+        "status": false
     },
     {
         "name": "張琬君(Wing Chang)",
         "dept": "HR Corporate Division",
-        "status": "false"
+        "status": false
     },
     {
         "name": "張文蕙(Tina Chang)",
         "dept": "HR Corporate Division",
-        "status": "false"
+        "status": false
     },
     {
         "name": "謝紹中(Joe SC Hsieh)",
         "dept": "HR Corporate Division",
-        "status": "false"
+        "status": false
     }
 ]
