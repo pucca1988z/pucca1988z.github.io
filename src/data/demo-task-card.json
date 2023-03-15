@@ -2,26 +2,26 @@
 	{
 		"name": "鄭勝仁(SJer Cheng)",
 		"dept": "HRIS Sec",
-		"status": "false"
+		"status": false
     },
     {
         "name": "黃子庭(Janet TT Huang)",
         "dept": "Total Rewards & Digital HR Dpt",
-        "status": "false"
+        "status": false
     },
     {
         "name": "張琬君(Wing Chang)",
         "dept": "Total Rewards & Digital HR Dpt",
-        "status": "false"
+        "status": false
     },
     {
         "name": "張文蕙(Tina Chang)",
         "dept": "Total Rewards & Digital HR Dpt",
-        "status": "false"
+        "status": false
     },
     {
         "name": "謝紹中(Joe SC Hsieh)",
         "dept": "HR Recruitment & Selection Dp",
-        "status": "false"
+        "status": false
     }
 ]
