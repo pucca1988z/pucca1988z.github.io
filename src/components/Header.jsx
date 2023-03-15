@@ -4,6 +4,9 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Fragment } from 'react'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const user = {
   name: 'ShepherdCW Fan',
@@ -32,6 +35,11 @@ export default function Header() {
         {...n, current: false} 
       ));
   }
+
+  const notify = () => {
+    toast("Bruce is going to be your new friend!");
+    setUserName("");
+  };
 
   const [navigation, setNavigation] = useState([
     { name: 'Orgnization Chart', href: '/', current: false },
@@ -84,9 +92,9 @@ export default function Header() {
                   </div>
                   <div className="hidden md:block">
                     <div className="ml-4 flex items-center md:ml-6">
-                  { userName ? 
+                  { userName && userName.length > 0 ? 
                   <div
-                  className="group flex justify-center cursor-pointer"
+                  className="group flex justify-center cursor-pointer" onClick={notify}
                   >
                     <BellIcon className='text-white transition group-hover:text-white/75 h-8 w-8'></BellIcon>
                     <span className="relative flex h-2 w-2">
@@ -205,7 +213,20 @@ export default function Header() {
               </Disclosure.Panel>
             </>
           )}
+          
         </Disclosure>
+        <ToastContainer
+            position="top-right"
+            autoClose={3000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"
+        />
     </>
   )
 }
